@@ -33,7 +33,8 @@ Package Website
 Deploy to GitHub Pages
    ↓
 Live Website
-DevOps Implementation
+
+DEVOPS IMPLEMENTION:
 Source code maintained in GitHub
 Azure DevOps YAML pipeline configured
 Automated website validation
@@ -41,8 +42,10 @@ Website files packaged as an artifact
 Automated deployment to GitHub Pages
 GitHub Personal Access Token stored securely as an Azure DevOps secret variable
 CI/CD pipeline tested successfully
+
 🌐 Live Website
 https://varma160.github.io/varma-tech/⁠�
+
 📁 Project Structure
 varma-tech/
 ├── index.html
@@ -50,6 +53,7 @@ varma-tech/
 ├── script.js
 ├── azure-pipelines.yml
 └── README.md
+
 🎯 Key Features
 Responsive website design
 Cloud & DevOps focused content
@@ -58,6 +62,7 @@ Services section
 Projects section
 Contact section
 Automated CI/CD deployment
+
 📌 DevOps Skills Demonstrated
 Git version control
 GitHub repository management
@@ -69,6 +74,9 @@ Artifact management
 GitHub Pages deployment
 Secure secret management
 Basic Docker knowledge
+
 👨‍💻 Author
 Mohan Sai Varma
 Cloud & DevOps Enthusiast
+
+THANK YOU VISITING MY PROJECT
