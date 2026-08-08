@@ -1,0 +1,34 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- script: |
+    echo "================================="
+    echo " VARMA TECH CI/CD PIPELINE"
+    echo "================================="
+    echo "Validating website files..."
+    test -f index.html
+    test -f style.css
+    test -f script.js
+    echo "All website files are present."
+  displayName: 'Validate Website'
+
+- task: ArchiveFiles@2
+  displayName: 'Package Website'
+  inputs:
+    rootFolderOrFile: '$(Build.SourcesDirectory)'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/varma-tech.zip'
+    replaceExistingArchive: true
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Website Artifact'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/varma-tech.zip'
+    ArtifactName: 'varma-tech-website'
+    publishLocation: 'Container'
