@@ -32,3 +32,23 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/varma-tech.zip'
     ArtifactName: 'varma-tech-website'
     publishLocation: 'Container'
+- script: |
+    git config --global user.email "azure-pipeline@users.noreply.github.com"
+    git config --global user.name "Azure Pipeline"
+
+    git clone https://x-access-token:$(GITHUB_PAT)@github.com/varma160/varma-tech.git deploy
+    cd deploy
+
+    git checkout --orphan gh-pages
+    git rm -rf .
+
+    cp ../index.html .
+    cp ../style.css .
+    cp ../script.js .
+
+    git add .
+    git commit -m "Deploy website from Azure DevOps"
+    git push --force origin gh-pages
+  displayName: 'Deploy website to GitHub Pages'
+  env:
+    GITHUB_PAT: $(GITHUB_PAT)
