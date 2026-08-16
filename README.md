@@ -1,4 +1,4 @@
-# Varma Tech – Cloud & DevOps Website
+# AZURE DEVOPS PROJECT – Cloud & DevOps Website
 
 A modern responsive website showcasing Cloud, DevOps, and Automation solutions.
 
